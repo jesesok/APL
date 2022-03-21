@@ -1,0 +1,13 @@
+POST http://localhost:8000/posted
+Content-Type: application/json
+
+{
+  "a": 1,
+  "b": 2
+}
+
+###
+GET http://localhost:8000/
+Accept: application/json
+
+###
