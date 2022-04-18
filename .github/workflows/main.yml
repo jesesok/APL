@@ -27,7 +27,8 @@ jobs:
 
 
     - name: Pylint
-      run : pylint app.py
-      with:
-        path: "/app/app.py"
-     
+      uses: gabriel-milan/action-pylint@v1
+
+
+    - name: build
+      run: docker compose build && docker compose up
