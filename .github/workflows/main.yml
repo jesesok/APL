@@ -37,5 +37,5 @@ jobs:
 
 
 
-#    - name: build
-#      run: docker compose build && docker compose up
+    - name: build
+      run: docker-compose build
