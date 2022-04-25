@@ -26,9 +26,10 @@ jobs:
       run : echo "Hello World"
 
 
-    - name: Pylint
-      uses: gabriel-milan/action-pylint@v1
+    - name: GitHub Action for pylint
+      uses: cclauss/GitHub-Action-for-pylint@0.7.0
 
 
-    - name: build
-      run: docker compose build && docker compose up
+
+#    - name: build
+#      run: docker compose build && docker compose up
