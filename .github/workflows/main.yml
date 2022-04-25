@@ -22,7 +22,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
+      - name: git clone
+        uses: actions/checkout@v2
       - name: Set up Python 3.9
         uses: actions/setup-python@v1
         with:
@@ -34,8 +35,5 @@ jobs:
       - name: Analysing the code with pylint
         run: |
           find . -name '*.py' -exec pylint {} \;
-
-
-
-    - name: build
-      run: docker-compose build
+      - name: build
+        run: docker-compose build
