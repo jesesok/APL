@@ -55,6 +55,8 @@ jobs:
     needs: [ login ]
     steps:
       - name: docker push
+        run: docker images
+      - name: docker push
         run: docker tag apl_web:latest jesesok/apl_web:latest
       - name: docker push
         run: docker push jesesok/apl_web:latest
