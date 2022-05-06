@@ -39,6 +39,7 @@ jobs:
         run: docker-compose build
 
   login:
+    runs-on: ubuntu-latest
     needs: [ build ]
     steps:
       - name: login to dockerhub
@@ -48,6 +49,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
 
   push:
+    runs-on: ubuntu-latest
     needs: [ login ]
     steps:
       - name: docker push
