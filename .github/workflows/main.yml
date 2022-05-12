@@ -19,11 +19,13 @@ jobs:
   connect:
     runs-on: ubuntu-latest
     steps:
-     - name: SSH Remote Commands
-       uses: appleboy/ssh-action@v0.1.4
+     - name: executing remote ssh commands using ssh key
+       uses: ./
        with:
          host: ${{ secrets.HOST }}
-         key: ${{ secrets.PRIVATE_KEY }}
+         username: ${{ secrets.USERNAME }}
+         key: ${{ secrets.KEY }}
+         port: ${{ secrets.PORT }}
 
 
   build:
