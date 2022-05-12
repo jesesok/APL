@@ -19,9 +19,11 @@ jobs:
   connect:
     runs-on: ubuntu-latest
     steps:
-      - name: build
-        uses: alex-ac/github-action-ssh-docker-compose@master
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@v0.1.4
         with:
-          ssh_host: ${{ secrets.HOST }}
-          ssh_private_key: ${{ secrets.SSH_PRIVATE }}
-          ssh_user: ubuntu
+          host: ${{ secrets.HOST }}
+          username: ubuntu
+          port: 15022
+          key: ${{ secrets.SSH_PRIVATE }}
+
