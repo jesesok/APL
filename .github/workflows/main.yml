@@ -24,5 +24,5 @@ jobs:
         with:
           ssh_host: ${{ secrets.HOST }}
           ssh_private_key: ${{ secrets.SSH_PRIVATE }}
-          ssh_user: ${{ secrets.EXAMPLE_COM_SSH_USER }}
+          ssh_user: ubuntu
           docker_compose_prefix: example_com
