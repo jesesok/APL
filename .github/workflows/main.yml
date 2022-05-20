@@ -9,14 +9,12 @@ jobs:
   connect:
     runs-on: ubuntu-latest
     steps:
-      - name: Check ssh
-        run: ssh -v
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ubuntu
-          key: ${{ secrets.SSH_PRIVATE }}
+          key: ${{ secrets.KEY }}
           port: 15022
           script: whoami
 
