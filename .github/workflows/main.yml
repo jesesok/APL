@@ -16,5 +16,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: cd APL/ && git pull && docker-compose build && docker-compose up -d
+          script: cd APL/ && docker-compose build && docker-compose up -d
 
