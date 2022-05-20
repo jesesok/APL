@@ -9,6 +9,8 @@ jobs:
   connect:
     runs-on: ubuntu-latest
     steps:
+      - name: Check ssh
+        run: ssh -v
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@master
         with:
